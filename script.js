@@ -37,14 +37,24 @@ setInterval(function() {
 }, 2000); 
 
 
-let toggler = document.querySelector('.toggler')
-let menu = document.querySelector('.links')
+let toggler = document.querySelector('.toggler');
+let menu = document.querySelector('.links');
+var x = window.matchMedia("(max-width: 700px)");
+function handleMenuDisplay() {
+    if (x.matches) {
+        menu.style.display = 'none';
+    } else { 
+        menu.style.display = 'flex';
+    }
+}
 
-toggler.addEventListener('click',function(){
+handleMenuDisplay()
+window.addEventListener('resize', handleMenuDisplay);
 
-    if(menu.style.display =='none')
-    {
-        menu.style.display = 'flex'
-    }else{menu.style.display = 'none'}
-
-})
+toggler.addEventListener('click', function() {
+        if (menu.style.display === 'none') {
+            menu.style.display = 'flex'; 
+        } else {
+            menu.style.display = 'none'; 
+        }
+});
