@@ -76,7 +76,7 @@ nav{
 .section-cover{
     height: 100vh;
     width: 100vw;
-    background-image: url('/images/artvision.jpg');
+    background-image: url('./images/artvision.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
